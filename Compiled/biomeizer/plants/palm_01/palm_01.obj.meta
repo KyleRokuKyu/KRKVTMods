@@ -1,0 +1,133 @@
+{
+  "Materials": [
+    {
+      "Color": "835610",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "a68932",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "6c32a6",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "32a64f",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "32a6a6",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "324fa6",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "6ca632",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "a63289",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "a63232",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "a68932",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "6c32a6",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "32a64f",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "397226",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "324fa6",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "6ca632",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    },
+    {
+      "Color": "a63289",
+      "CompanyTint": 0,
+      "Emission": 0,
+      "Glassiness": 0,
+      "Smoothness": 0,
+      "Specular": 0
+    }
+  ],
+  "Variants": null
+}

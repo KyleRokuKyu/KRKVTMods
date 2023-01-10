@@ -1,0 +1,62 @@
+{
+  "Bumpiness": 0.1,
+  "Humidity": 0.246,
+  "Temperature": 0.727,
+  "BodyColor": "ccb365",
+  "CoverColor": "ccb474",
+  "Hidden": false,
+  "Plants": [
+    {
+      "Uri": "base/cactus.plant",
+      "Probability": 0.024
+    }
+  ],
+  "AmbientUri": "base/low_wind.ogg",
+  "Sounds": [
+    {
+      "Uri": "base/desert1.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/desert2.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/desert3.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/desert4.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/desert5.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/crickets2.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/crickets3.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/crickets4.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/crickets5.wav",
+      "Probability": 0.5
+    }
+  ],
+  "LiveryTag": null,
+  "Tags": null,
+  "RiverDispersion": 0.1,
+  "RiverSize": 0.1,
+  "WaterColor": "1667b8",
+  "MinimumHeight": 0,
+  "MaximumHeight": 6,
+  "Probability": 0.2,
+  "Rivers": false
+}

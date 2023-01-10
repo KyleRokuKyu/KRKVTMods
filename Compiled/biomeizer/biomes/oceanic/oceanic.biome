@@ -1,0 +1,40 @@
+
+{
+  "Bumpiness": -40,
+  "Humidity": 0.8,
+  "Temperature": 0.8,
+  "BodyColor": "b39c60",
+  "CoverColor": "ebd28f",
+  "Hidden": false,
+  "Plants": [
+    {
+      "Uri": "biomeizer/palm_01.plant",
+      "Probability": 0.01
+    }
+  ],
+  "AmbientUri": "biomeizer/oceanic_ambiance_01.wav",
+  "Sounds": [
+    {
+      "Uri": "base/creak3.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/creak4.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/aircraft2.ogg",
+      "Probability": 0.5
+    }
+  ],
+  "LiveryTag": null,
+  "Tags": null,
+  "RiverDispersion": 0.3,
+  "RiverSize": 2.0,
+  "WaterColor": "76f5f3",
+  "MinimumHeight": -3,
+  "MaximumHeight": 2,
+  "Probability": 1.0,
+  "Rivers": true,
+  "ExcludeFromSpawn": true
+}

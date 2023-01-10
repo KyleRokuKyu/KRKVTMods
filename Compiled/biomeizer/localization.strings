@@ -1,0 +1,16 @@
+{
+  "LocaleUri": "base/en.locale",
+  "Items": {
+    "biomeizer/mountainous.biome#DisplayName": "Mountainous",
+    "biomeizer/oceanic.biome#DisplayName": "Oceanic",
+    "biomeizer/arcticocean.biome#DisplayName": "Arctic Ocean",
+    "biomeizer/marshlands.biome#DisplayName": "Marsh Lands",
+    "biomeizer/dunes.biome#DisplayName": "Dunes",
+    "biomeizer/mesa.biome#DisplayName": "Mesa",
+    "biomeizer/mushroomisland.biome#DisplayName": "Mushroom Island",
+    "biomeizer/palm_01.plant#DisplayName": "Palm Tree",
+    "biomeizer/mushroom_01.plant#DisplayName": "Tall Mushroom",
+    "biomeizer/mushroom_02.plant#DisplayName": "Short Mushroom",
+    "biomeizer/mushroom_03.plant#DisplayName": "Tilted Mushroom",
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "Growable": true,
+  "GrowSpeed": 0.01,
+  "InitialScale": 0.25,
+  "Size": [2, 3, 3],
+  "Liveries": {
+    "default": {
+      "MeshUri": "biomeizer/palm_01.obj",
+      "MeshVariant": null,
+      "Lights": null,
+      "NightLiveries": null,
+      "BiomeLiveries": null
+    }
+  },
+  "Price": 100.0,
+  "PriceMultiplier": null,
+  "RunningCosts": null,
+  "RunningCostsMultiplier": null,
+  "Hidden": false
+}

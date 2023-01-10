@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "wpyJF0fSkv4wNZHzqb9usuY6lkfXmAUKY3m+ryRkYM7sFXuQZEV5zJVO1VO2z1LcMaWi57yQiM42DnN6yIclAQ==",
+  "success": true,
+  "projectFilePath": "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\Biomeizer\\Biomeizer\\Biomeizer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rage9\\.nuget\\packages\\microsoft.netcore.app\\2.0.0\\microsoft.netcore.app.2.0.0.nupkg.sha512",
+    "C:\\Users\\rage9\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.0.0\\microsoft.netcore.dotnetapphost.2.0.0.nupkg.sha512",
+    "C:\\Users\\rage9\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.0.0\\microsoft.netcore.dotnethostpolicy.2.0.0.nupkg.sha512",
+    "C:\\Users\\rage9\\.nuget\\packages\\microsoft.netcore.dotnethostresolver\\2.0.0\\microsoft.netcore.dotnethostresolver.2.0.0.nupkg.sha512",
+    "C:\\Users\\rage9\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\rage9\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,64 @@
+
+{
+  "Bumpiness": -40,
+  "Humidity": 0.0,
+  "Temperature": 0.0,
+  "BodyColor": "b39c60",
+  "CoverColor": "6b8a88",
+  "Hidden": false,
+  "Plants": [
+    {
+      "Uri": "base/spruce.plant",
+      "Probability": 0.02
+    },
+    {
+      "Uri": "base/spruce_stump.plant",
+      "Probability": 0.0024
+    }
+  ],
+  "AmbientUri": "base/autumn.ogg",
+  "Sounds": [
+    {
+      "Uri": "base/creak3.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/creak4.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/leafes1.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/leafes2.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/leafes3.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/leafes4.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/leafes5.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/aircraft2.ogg",
+      "Probability": 0.5
+    }
+  ],
+  "LiveryTag": null,
+  "Tags": null,
+  "RiverDispersion": 0.1,
+  "RiverSize": 0.3,
+  "WaterColor": "90c4de",
+  "MinimumHeight": 0,
+  "MaximumHeight": 4,
+  "Probability": 1.0,
+  "Rivers": true,
+  "ExcludeFromSpawn": true
+}

@@ -1,0 +1,38 @@
+{
+	"SettingsBackgroundColor": "cfcfcfc0",
+	"SettingsPosition": {
+		"x": 0.0,
+		"y": 0.0,
+		"z": 0.0
+	},
+	"SettingsSize": {
+		"x": 0.8766505,
+		"y": 0.3216019,
+		"z": 1.0,
+		"w": 0.6497962
+	},
+	"ColorPickerSize": {
+		"x": 0.121,
+		"y": 0.0733069,
+		"z": 0.8790001,
+		"w": 0.588
+	},
+	"ImperfectionsSize": {
+		"x": 0.756,
+		"y": 0.6906931,
+		"z": 0.8790001,
+		"w": 0.7713069
+	},
+	"ImperfectionsTextSize": {
+		"x": 0.121,
+		"y": 0.6906931,
+		"z": 0.756,
+		"w": 0.7713069
+	},
+	"LabelTextSize": {
+		"x": 0.176,
+		"y": 0.8446138,
+		"z": 0.822,
+		"w": 0.9253069
+	}
+}

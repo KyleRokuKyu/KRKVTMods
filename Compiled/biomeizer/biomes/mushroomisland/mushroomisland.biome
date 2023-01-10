@@ -1,0 +1,48 @@
+
+{
+  "Bumpiness": -2,
+  "Humidity": 0.8,
+  "Temperature": 0.8,
+  "BodyColor": "8a7663",
+  "CoverColor": "a56bb0",
+  "Hidden": false,
+  "Plants": [
+    {
+      "Uri": "biomeizer/mushroom_01.plant",
+      "Probability": 0.01
+    },
+    {
+      "Uri": "biomeizer/mushroom_02.plant",
+      "Probability": 0.01
+    },
+    {
+      "Uri": "biomeizer/mushroom_03.plant",
+      "Probability": 0.01
+    }
+  ],
+  "AmbientUri": "biomeizer/oceanic_ambiance_01.wav",
+  "Sounds": [
+    {
+      "Uri": "base/creak3.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/creak4.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/aircraft2.ogg",
+      "Probability": 0.5
+    }
+  ],
+  "LiveryTag": null,
+  "Tags": null,
+  "RiverDispersion": 0.3,
+  "RiverSize": 0.8,
+  "WaterColor": "aea3cc",
+  "MinimumHeight": -3,
+  "MaximumHeight": 2,
+  "Probability": 0.01,
+  "Rivers": true,
+  "ExcludeFromSpawn": true
+}

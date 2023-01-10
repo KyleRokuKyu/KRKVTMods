@@ -1,0 +1,32 @@
+{
+	"arctic" [
+		"RiverDispersion":0.1,
+		"RiverSize":0.1,
+		"WaterColor":"90c4de",
+	],
+	"deciduous_forest" [
+		"RiverDispersion":0.35,
+		"RiverSize":0.25,
+		"WaterColor":"0d297a",
+	],
+	"desert" [
+		"RiverDispersion":0.6,
+		"RiverSize":0.1,
+		"WaterColor":"228994",
+	],
+	"savanna" [
+		"RiverDispersion":0.3,
+		"RiverSize":0.2,
+		"WaterColor":"228994",
+	],
+	"subarctic" [
+		"RiverDispersion":0.2,
+		"RiverSize":0.2,
+		"WaterColor":"5eadb5",
+	],
+	"temperate" [
+		"RiverDispersion":0.3,
+		"RiverSize":0.3,
+		"WaterColor":"2abddc",
+	]
+}

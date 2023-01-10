@@ -1,0 +1,39 @@
+{
+  "Description": "A full world gen overhaul with new biomes, oceans, rivers, and more!
+
+New Biomes:
+Oceanic - A beach/tropical shore line
+Marsh Lands - Very damp, swampy, kinda terrible to have to cross sometimes
+Mesa - Tall, sandstone plateau
+Mountainous - A large mountain range
+Dunes - Desertous and slopey
+Arctic Ocean - An ocean in the arctic with ice bergs
+
+New Per Biome Settings:
+RiverDispersion - How twisty or broken up rivers tend to be
+RiverSize - How chonky and wide the rivers tend to be
+WaterColor - Hex value for the color of the water
+MinimumHeight - The lowest this biome can generate land
+MaximumHeight - The highest this biome can generate land
+Probability - If there's a tie for which biome should spawn based on Temp/Humidity, this determines how likely this biome is to be chosen
+Rivers - Whether or not this biome has rivers
+ExcludeFromSpawn - Whether or not this biome should be considered when creating the initial spawn area (Oceans would be terrible to spawn in.)
+
+New World Settings (In the biomesettings.biome file):
+TemperatureGeneration - How temperature is calculated. Latitude clamps it at both poles, LatitudeWrapped will continuously cycle hotter and colder as you change latitudes, and Default is the vanilla random temperature (Can generate snow next to deserts)
+Water - Whether or not this world has water
+Rivers - Whether or not this world has rivers
+PlanetSize - How large the temperature gradients span
+BiggerElevationChanges - Whether or not to use the default heights and bumpiness generation
+
+----------------------------------
+
+If you aren't already,
+I HIGHLY recommend using F5's Biome Recolor mods with Biome-izer
+It makes the vanilla biomes look so much more pleasing to the eye
+
+F5's Biome Recolor Pack:
+https://steamcommunity.com/workshop/filedetails/?id=2458946041",
+  "PublishedFileId": 2617844263,
+  "Title": "Biomeizer"
+}

@@ -1,0 +1,10 @@
+{
+  "Hidden": true,
+  "RiverDispersion": 0.1,
+  "RiverSize": 0.1,
+  "WaterColor": "228994",
+  "MinimumHeight": 1,
+  "MaximumHeight": 4,
+  "Probability": 1.0,
+  "Rivers": false
+}

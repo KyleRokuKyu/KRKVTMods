@@ -1,0 +1,83 @@
+{
+  "Bumpiness": 1.2,
+  "Humidity": 1.0,
+  "Temperature": 0.1,
+  "BodyColor": "615e59",
+  "CoverColor": "48523a",
+  "Hidden": false,
+  "Plants": [
+    {
+      "Uri": "base/autumn_spruce.plant",
+      "Probability": 0.01
+    },
+    {
+      "Uri": "base/autumn_tree.plant",
+      "Probability": 0.003
+    },
+    {
+      "Uri": "base/autumn_tree_2.plant",
+      "Probability": 0.0001
+    },
+    {
+      "Uri": "base/autumn_tree_3.plant",
+      "Probability": 0.001
+    },
+    {
+      "Uri": "base/autumn_tree_4.plant",
+      "Probability": 0.045
+    },
+    {
+      "Uri": "base/autumn_stump.plant",
+      "Probability": 0.0005
+    },
+    {
+      "Uri": "base/autumn_stump_2.plant",
+      "Probability": 0.001
+    }
+  ],
+  "AmbientUri": "base/autumn.ogg",
+  "Sounds": [
+    {
+      "Uri": "base/creak3.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/creak4.wav",
+      "Probability": 0.5
+    },
+    {
+      "Uri": "base/leafes1.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/leafes2.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/leafes3.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/leafes4.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/leafes5.wav",
+      "Probability": 1.0
+    },
+    {
+      "Uri": "base/aircraft2.ogg",
+      "Probability": 0.5
+    }
+  ],
+  "LiveryTag": null,
+  "Tags": null,
+  "RiverDispersion": 0.1,
+  "RiverSize": 0.1,
+  "WaterColor": "1667b8",
+  "MinimumHeight": 0,
+  "MaximumHeight": 20,
+  "Probability": 1.0,
+  "Rivers": true,
+  "ExcludeFromSpawn": true
+}
