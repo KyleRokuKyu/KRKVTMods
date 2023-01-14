@@ -466,6 +466,15 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 		return Mathf.Max(_cache[xz].OriginalHeight, WorldSettings.Current.WaterHeight);
 	}
 
+	/*  This is a vague fix for the cost issue but is also insanely laggy
+	public void SetOriginalHeight(Xz xz, int newHeight)
+	{
+		CacheValue cache = _cache[xz];
+		cache.OriginalHeight = newHeight;
+		_cache[xz] = cache;
+	}
+	*/
+
 	public bool IsPlain(Xz xz)
 	{
 		return _cache[xz].IsPlain;
@@ -659,13 +668,13 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 			modSettings.PlanetSize = 2500;
 			modSettings.BiggerElevationChanges = true;
 
-			WorldGenOverhaulSettings.SetSetting(WorldGenOverhaulSettings.RegionSizeMultiplier, 1.0f, WorldSettings.Current);
-			WorldGenOverhaulSettings.SetSetting(WorldGenOverhaulSettings.TemperatureGeneration, "LatitudeWrapped", WorldSettings.Current);
-			WorldGenOverhaulSettings.SetSetting(WorldGenOverhaulSettings.StartingLatitude, 20.0f, WorldSettings.Current);
-			WorldGenOverhaulSettings.SetSetting(WorldGenOverhaulSettings.Water, true, WorldSettings.Current);
-			WorldGenOverhaulSettings.SetSetting(WorldGenOverhaulSettings.Rivers, true, WorldSettings.Current);
-			WorldGenOverhaulSettings.SetSetting(WorldGenOverhaulSettings.PlanetSize, 2500f, WorldSettings.Current);
-			WorldGenOverhaulSettings.SetSetting(WorldGenOverhaulSettings.BiggerElevationChanges, true, WorldSettings.Current);
+			SettingsModHelper.SetSetting<float, WorldGenOverhaulSettings>(WorldGenOverhaulSettings.RegionSizeMultiplier, 1.0f, WorldSettings.Current);
+			SettingsModHelper.SetSetting<string, WorldGenOverhaulSettings>(WorldGenOverhaulSettings.TemperatureGeneration, "LatitudeWrapped", WorldSettings.Current);
+			SettingsModHelper.SetSetting<float, WorldGenOverhaulSettings>(WorldGenOverhaulSettings.StartingLatitude, 20.0f, WorldSettings.Current);
+			SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(WorldGenOverhaulSettings.Water, true, WorldSettings.Current);
+			SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(WorldGenOverhaulSettings.Rivers, true, WorldSettings.Current);
+			SettingsModHelper.SetSetting<float, WorldGenOverhaulSettings>(WorldGenOverhaulSettings.PlanetSize, 2500f, WorldSettings.Current);
+			SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(WorldGenOverhaulSettings.BiggerElevationChanges, true, WorldSettings.Current);
 		}
 	}
 }

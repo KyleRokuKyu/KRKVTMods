@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\Biomeizer\\Biomeizer\\Biomeizer.csproj": {}
+    "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\KRKVTModsRepo\\Biomeizer\\Biomeizer\\Biomeizer.csproj": {}
   },
   "projects": {
-    "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\Biomeizer\\Biomeizer\\Biomeizer.csproj": {
+    "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\KRKVTModsRepo\\Biomeizer\\Biomeizer\\Biomeizer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\Biomeizer\\Biomeizer\\Biomeizer.csproj",
+        "projectUniqueName": "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\KRKVTModsRepo\\Biomeizer\\Biomeizer\\Biomeizer.csproj",
         "projectName": "Biomeizer",
-        "projectPath": "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\Biomeizer\\Biomeizer\\Biomeizer.csproj",
+        "projectPath": "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\KRKVTModsRepo\\Biomeizer\\Biomeizer\\Biomeizer.csproj",
         "packagesPath": "C:\\Users\\rage9\\.nuget\\packages\\",
-        "outputPath": "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\Biomeizer\\Biomeizer\\obj\\",
+        "outputPath": "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\KRKVTModsRepo\\Biomeizer\\Biomeizer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "S:\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.0"
+          "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.0": {
-            "targetAlias": "netcoreapp2.0",
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -37,13 +37,13 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.0": {
-          "targetAlias": "netcoreapp2.0",
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Microsoft.NETCore.App": {
+            "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.0.0, )",
+              "version": "[2.0.3, )",
               "autoReferenced": true
             }
           },

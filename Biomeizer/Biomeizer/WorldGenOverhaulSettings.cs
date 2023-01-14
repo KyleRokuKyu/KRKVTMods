@@ -20,47 +20,47 @@ public class WorldGenOverhaulSettings : SettingsMod
 
 	protected override void SetDefaults(WorldSettings worldSettings)
 	{
-		SetSetting(RegionSizeMultiplier, GetSetting(RegionSizeMultiplier, 1.0f), worldSettings);
-		SetSetting(TemperatureGeneration, GetSetting(TemperatureGeneration, "LatitudeWrapped"), worldSettings);
-		SetSetting(StartingLatitude, GetSetting(StartingLatitude, 20.0f), worldSettings);
-		SetSetting(Water, GetSetting(Water, true), worldSettings);
-		SetSetting(Rivers, GetSetting(Rivers, true), worldSettings);
-		SetSetting(PlanetSize, GetSetting(PlanetSize, 2500f), worldSettings);
-		SetSetting(BiggerElevationChanges, GetSetting(BiggerElevationChanges, true), worldSettings);
+		SettingsModHelper.SetSetting<float, WorldGenOverhaulSettings>(RegionSizeMultiplier, SettingsModHelper.GetSetting<float, WorldGenOverhaulSettings>(RegionSizeMultiplier, 1.0f), worldSettings);
+		SettingsModHelper.SetSetting<string, WorldGenOverhaulSettings>(TemperatureGeneration, SettingsModHelper.GetSetting<string, WorldGenOverhaulSettings>(TemperatureGeneration, "LatitudeWrapped"), worldSettings);
+		SettingsModHelper.SetSetting<float, WorldGenOverhaulSettings>(StartingLatitude, SettingsModHelper.GetSetting<float, WorldGenOverhaulSettings>(StartingLatitude, 20.0f), worldSettings);
+		SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(Water, SettingsModHelper.GetSetting<bool, WorldGenOverhaulSettings>(Water, true), worldSettings);
+		SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(Rivers, SettingsModHelper.GetSetting<bool, WorldGenOverhaulSettings>(Rivers, true), worldSettings);
+		SettingsModHelper.SetSetting<float, WorldGenOverhaulSettings>(PlanetSize, SettingsModHelper.GetSetting<float, WorldGenOverhaulSettings>(PlanetSize, 2500f), worldSettings);
+		SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(BiggerElevationChanges, SettingsModHelper.GetSetting<bool, WorldGenOverhaulSettings>(BiggerElevationChanges, true), worldSettings);
 	}
 
 	protected override void SetupSettingsControl(SettingsControl settingsControl, WorldSettings worldSettings)
 	{
 		settingsControl.AddSlider("Region Size Multiplier", "How large is too large? (Warning, over 2x, or so, gets REALLY lengthy load times.  Might even run out of memory)",
-									() => GetSetting(RegionSizeMultiplier, 1.0f),
-									value => SetSetting(RegionSizeMultiplier, value, worldSettings),
+									() => SettingsModHelper.GetSetting<float, WorldGenOverhaulSettings>(RegionSizeMultiplier, 1.0f),
+									value => SettingsModHelper.SetSetting<float, WorldGenOverhaulSettings>(RegionSizeMultiplier, value, worldSettings),
 									0.1f, 10.0f, FloatToStringOneDecimal);
 
 		settingsControl.AddDropdown("Temperature Generation", "The method used to determine which biomes can be next to each other.",
-									() => StringToTempGen(GetSetting(TemperatureGeneration, "LatitudeWrapped")),
-									value => SetSetting(TemperatureGeneration, TempGenToString(value), worldSettings));
+									() => StringToTempGen(SettingsModHelper.GetSetting<string, WorldGenOverhaulSettings>(TemperatureGeneration, "LatitudeWrapped")),
+									value => SettingsModHelper.SetSetting<string, WorldGenOverhaulSettings>(TemperatureGeneration, TempGenToString(value), worldSettings));
 
 		settingsControl.AddSlider("Starting Latitude", "From -90 to 90, where on the planet to we start?",
-									() => GetSetting(StartingLatitude, 20.0f),
-									value => SetSetting(StartingLatitude, value, worldSettings),
+									() => SettingsModHelper.GetSetting<float, WorldGenOverhaulSettings>(StartingLatitude, 20.0f),
+									value => SettingsModHelper.SetSetting<float, WorldGenOverhaulSettings>(StartingLatitude, value, worldSettings),
 									-90f, 90f, FloatToString);
 
 		settingsControl.AddToggle("Water", "Whether or not this world has water",
-									() => GetSetting(Water, true),
-									value => SetSetting(Water, value, worldSettings));
+									() => SettingsModHelper.GetSetting<bool, WorldGenOverhaulSettings>(Water, true),
+									value => SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(Water, value, worldSettings));
 
 		settingsControl.AddToggle("Rivers", "Whether or not this world has rivers",
-									() => GetSetting(Rivers, true),
-									value => SetSetting(Rivers, value, worldSettings));
+									() => SettingsModHelper.GetSetting<bool, WorldGenOverhaulSettings>(Rivers, true),
+									value => SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(Rivers, value, worldSettings));
 
 		settingsControl.AddSlider("Planet Size", "The size of the 'planet' that is used for temperature gradients",
-									() => GetSetting(PlanetSize, 2500f),
-									value => SetSetting(PlanetSize, value, worldSettings),
+									() => SettingsModHelper.GetSetting<float, WorldGenOverhaulSettings>(PlanetSize, 2500f),
+									value => SettingsModHelper.SetSetting<float, WorldGenOverhaulSettings>(PlanetSize, value, worldSettings),
 									10f, 5000f, FloatToString);
 
 		settingsControl.AddToggle("Bigger Elevation Changes", "Whether or not this world uses the larger elevation changes. (Warning, this means more terraforming is required)",
-									() => GetSetting(BiggerElevationChanges, true),
-									value => SetSetting(BiggerElevationChanges, value, worldSettings));
+									() => SettingsModHelper.GetSetting<bool, WorldGenOverhaulSettings>(BiggerElevationChanges, true),
+									value => SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(BiggerElevationChanges, value, worldSettings));
 	}
 
 	public static GenerationMethods StringToTempGen(string value)
@@ -91,7 +91,7 @@ public class WorldGenOverhaulSettings : SettingsMod
 		return "Default";
 	}
 
-
+	/*
 	#region Sets
 	public static void SetSetting(string name, float value, WorldSettings worldSettings)
 	{
@@ -170,4 +170,5 @@ public class WorldGenOverhaulSettings : SettingsMod
 		}
 	}
 	#endregion
+	*/
 }

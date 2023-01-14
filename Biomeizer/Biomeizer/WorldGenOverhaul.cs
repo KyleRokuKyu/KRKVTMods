@@ -25,9 +25,17 @@ public class WorldGenOverhaul : Mod
 
 	[HarmonyPostfix]
 	[HarmonyPatch(typeof(WorldSettings), "get_RegionSizeMultiplier")]
-	private static void GetRegionSizeMultiplier(ref float __result, WorldSettings __instance)
+	private static void GetRegionSizeMultiplier(ref float __result)
 	{
-		if (__result == 1)
-			__result = WorldSettings.Current.GetFloat<WorldGenOverhaulSettings>(WorldGenOverhaulSettings.RegionSizeMultiplier);
+		__result *= WorldSettings.Current.GetFloat<WorldGenOverhaulSettings>(WorldGenOverhaulSettings.RegionSizeMultiplier);
 	}
+
+	/*
+	[HarmonyPostfix]
+	[HarmonyPatch(typeof(WorldManager), "FlattenHeight")]
+	public static void FlattenHeight(Xyz xyz)
+	{
+		(LazyManager<WorldGeneratorManager>.Current.Factory() as WorldGenOverhaulGenerator).SetOriginalHeight(new Xz(xyz.X, xyz.Z), xyz.Y);
+	}
+	*/
 }
