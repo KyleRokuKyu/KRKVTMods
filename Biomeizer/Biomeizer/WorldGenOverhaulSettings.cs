@@ -34,7 +34,7 @@ public class WorldGenOverhaulSettings : SettingsMod
 		settingsControl.AddSlider("Region Size Multiplier", "How large is too large? (Warning, over 2x, or so, gets REALLY lengthy load times.  Might even run out of memory)",
 									() => SettingsModHelper.GetSetting<float, WorldGenOverhaulSettings>(RegionSizeMultiplier, 1.0f),
 									value => SettingsModHelper.SetSetting<float, WorldGenOverhaulSettings>(RegionSizeMultiplier, value, worldSettings),
-									0.1f, 10.0f, FloatToStringOneDecimal);
+									0.1f, 5.0f, FloatToStringOneDecimal);
 
 		settingsControl.AddDropdown("Temperature Generation", "The method used to determine which biomes can be next to each other.",
 									() => StringToTempGen(SettingsModHelper.GetSetting<string, WorldGenOverhaulSettings>(TemperatureGeneration, "LatitudeWrapped")),

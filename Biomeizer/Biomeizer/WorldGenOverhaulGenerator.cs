@@ -59,6 +59,8 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 
 	public struct ModSettings
 	{
+		public float RegionSizeMultiplier;
+
 		public string TemperatureGeneration;
 
 		public float StartingLatitude;
@@ -109,7 +111,6 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 			xz4.Z = Mathf.RoundToInt(((float)index.Z + _nodeRandom.RangeFloat(num12, 1f - num12)) * (float)WorldSettings.Current.BiomeCellSize);
 			Xz xz5 = xz4;
 			Xz regionCenter = Manager<RegionManager>.Current.GetRegionCenter(xz5);
-			//float @float = WorldSettings.Current.Temperature.GetFloat(regionCenter.X, regionCenter.Z);
 			float @float;
 			float float2 = WorldSettings.Current.Humidity.GetFloat(regionCenter.X, regionCenter.Z);
 			Biome biome2;
@@ -140,8 +141,6 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 					break;
 
 			}
-			//float2 *= @float;
-			//Biome biome2 = Manager<BiomeManager>.Current.GetBiome(@float, float2);
 			Node result2 = default(Node);
 			result2.Center = xz5;
 			result2.Biome = biome2;
@@ -262,7 +261,6 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 			Color color = vector / num3;
 			Color color2 = vector2 / num3;
 
-			//float num6 = PerlinNoise(xz.X, xz.Z, _baseSeedX, _baseSeedZ, 150f, 1f, 3, 3.5f);
 			float num6 = PerlinNoise(xz.X, xz.Z, _baseSeedX, _baseSeedZ, 100f, 1f, 3, 1f);
 			float num7 = Mathf.InverseLerp(-3f, 7f, 0.5f);
 			num6 -= num7;
@@ -273,12 +271,9 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 			{
 				num8 = Mathf.LerpUnclamped(minHeight, maxHeight, num6);
 			}
-			//float num8 = Mathf.LerpUnclamped(-3f, 7f, num6);
-			//float num9 = num2 * Mathf.Lerp(0f, 1f, Mathf.InverseLerp(0.6f, 0.75f, num6));
 			float num9 = num2 * Mathf.Lerp(0f, 1f, Mathf.InverseLerp(0.6f - (num2 * num2), 1f, num6));
 			if (num9 > 0f)
 			{
-				//float num10 = Mathf.LerpUnclamped(0f, 25f, RidgedNoise(xz.X, xz.Z, _mountainSeedX, _mountainSeedZ, 55f, 2.5f, 3, 1.9f));
 				float num10 = Mathf.LerpUnclamped(0f, 15f, RidgedNoise(xz.X, xz.Z, _mountainSeedX, _mountainSeedZ, 45f, 1f, 2, 1f) * Mathf.Lerp(0.5f, 1.0f, PerlinNoise(xz.X, xz.Z, _mountainSeedX, _mountainSeedZ, 60f, 1f, 4, 1f)));
 				num8 += num10 * num9;
 			}
@@ -300,7 +295,6 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 			}
 
 			int num11 = Mathf.RoundToInt(num8);
-			//bool isPlain = num9 < 0.1f && num11 >= WorldSettings.Current.WaterHeight;
 			bool isPlain = num11 >= WorldSettings.Current.WaterHeight;
 			CacheValue result = default(CacheValue);
 			result.Biome = biome;
@@ -652,6 +646,7 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 		modSettings = new ModSettings();
 		try
 		{
+			modSettings.RegionSizeMultiplier = WorldSettings.Current.GetFloat<WorldGenOverhaulSettings>(WorldGenOverhaulSettings.RegionSizeMultiplier);
 			modSettings.TemperatureGeneration = WorldSettings.Current.GetString<WorldGenOverhaulSettings>(WorldGenOverhaulSettings.TemperatureGeneration);
 			modSettings.StartingLatitude = WorldSettings.Current.GetFloat<WorldGenOverhaulSettings>(WorldGenOverhaulSettings.StartingLatitude);
 			modSettings.Water = WorldSettings.Current.GetBool<WorldGenOverhaulSettings>(WorldGenOverhaulSettings.Water);
@@ -661,6 +656,7 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 		}
 		catch
 		{
+			modSettings.RegionSizeMultiplier = 1.0f;
 			modSettings.TemperatureGeneration = "LatitudeWrapped";
 			modSettings.StartingLatitude = 20;
 			modSettings.Water = true;

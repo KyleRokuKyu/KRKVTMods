@@ -1,7 +1,10 @@
 ﻿using HarmonyLib;
+using System;
+using UnityEngine;
 using VoxelTycoon;
 using VoxelTycoon.Generators;
 using VoxelTycoon.Modding;
+using VoxelTycoon.Tools;
 
 [HarmonyPatch]
 public class WorldGenOverhaul : Mod
@@ -24,18 +27,24 @@ public class WorldGenOverhaul : Mod
 	}
 
 	[HarmonyPostfix]
-	[HarmonyPatch(typeof(WorldSettings), "get_RegionSizeMultiplier")]
-	private static void GetRegionSizeMultiplier(ref float __result)
+	[HarmonyPatch(typeof(WorldSettings), "get_RegionResolution")]
+	private static void GetRegionSizeMultiplier(ref int __result)
 	{
-		__result *= WorldSettings.Current.GetFloat<WorldGenOverhaulSettings>(WorldGenOverhaulSettings.RegionSizeMultiplier);
+		__result += (int)WorldSettings.Current.GetFloat<WorldGenOverhaulSettings>(WorldGenOverhaulSettings.RegionSizeMultiplier);
 	}
 
-	/*
 	[HarmonyPostfix]
-	[HarmonyPatch(typeof(WorldManager), "FlattenHeight")]
-	public static void FlattenHeight(Xyz xyz)
+	[HarmonyPatch(typeof(ToolHelper), "GetFlattenPrice",
+			new Type[] {
+							typeof(Xyz),
+							typeof(int),
+			})]
+	public static void GetFlattenPrice(ref double __result)
 	{
-		(LazyManager<WorldGeneratorManager>.Current.Factory() as WorldGenOverhaulGenerator).SetOriginalHeight(new Xz(xyz.X, xyz.Z), xyz.Y);
+		double workerFloat = __result/20000000.0; // hard coding 40,000,000 as the upper limit for now
+		workerFloat = Math.Min(workerFloat, 1.0);
+		workerFloat = 1.0 - Math.Pow(workerFloat - 1, 4);
+		workerFloat *= 1000000.0;
+		__result = workerFloat;
 	}
-	*/
 }
