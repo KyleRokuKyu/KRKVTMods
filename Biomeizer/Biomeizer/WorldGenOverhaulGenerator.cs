@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using UnityEngine;
 using VoxelTycoon;
 using VoxelTycoon.AssetLoading;
 using VoxelTycoon.Buildings;
@@ -72,6 +74,8 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 		public float PlanetSize;
 
 		public bool BiggerElevationChanges;
+
+		public Dictionary<string, bool> ActiveBiomes;
 	}
 
 	public static readonly Color SnowColor = ColorHelper.FromHexString("f0f0f0");
@@ -358,6 +362,24 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 		float num = float.MaxValue;
 		for (int b = 0; b < BiomeManager.Current.Biomes.Count; b++)
 		{
+			string URI = AssetLibrary.Current.GetAssetUri(BiomeManager.Current.Biomes[b].AssetId);
+			Node tempNode = default;
+			if (ChopString(URI, URI.Length - 5, true) == "base/")
+			{
+				string biomeName = ChopString(URI, "base/");
+				tempNode = AssetHandler.LoadData<Node>(AssetLibrary.Current.GetAssetInfo(AssetLibrary.Current.GetAssetId("biomeizer/" + biomeName)));
+			}
+			else
+			{
+				tempNode = AssetHandler.LoadData<Node>(AssetLibrary.Current.GetAssetInfo(BiomeManager.Current.Biomes[b].AssetId));
+			}
+
+			string checkingBiome = AssetLibrary.Current.GetAssetUri(BiomeManager.Current.Biomes[b].AssetId);
+			checkingBiome = checkingBiome.Split('/')[checkingBiome.Split('/').Length - 1].Split(".biome")[0].Trim();
+			if (!SettingsModHelper.GetSetting<bool, WorldGenOverhaulSettings>(checkingBiome, true) || (xz.X == 0 && xz.Z == 0 && tempNode.ExcludeFromSpawn))
+			{
+				continue;
+			}
 			float sqrMagnitude = (vector - new Vector2(BiomeManager.Current.Biomes[b].Temperature, BiomeManager.Current.Biomes[b].Humidity)).sqrMagnitude;
 			if (sqrMagnitude < num)
 			{
@@ -379,10 +401,15 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 			{
 				tempNode = AssetHandler.LoadData<Node>(AssetLibrary.Current.GetAssetInfo(BiomeManager.Current.Biomes[b].AssetId));
 			}
-			if (xz.X == 0 && xz.X == 0 && tempNode.ExcludeFromSpawn)
+
+			string checkingBiome = AssetLibrary.Current.GetAssetUri(BiomeManager.Current.Biomes[b].AssetId);
+			checkingBiome = checkingBiome.Split('/')[checkingBiome.Split('/').Length - 1].Split(".biome")[0].Trim();
+
+			if (!SettingsModHelper.GetSetting<bool, WorldGenOverhaulSettings>(checkingBiome, true) || (xz.X == 0 && xz.Z == 0 && tempNode.ExcludeFromSpawn))
 			{
 				continue;
 			}
+
 			float sqrMagnitude = (vector - new Vector2(BiomeManager.Current.Biomes[b].Temperature, BiomeManager.Current.Biomes[b].Humidity)).sqrMagnitude;
 			if (sqrMagnitude <= num)
 			{
@@ -393,6 +420,7 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 				possibleBiomes = AddToArray(possibleBiomes, tempWeightedBiome);
 			}
 		}
+
 		float roll = Random.Range(0, accumulatedWeight);
 		for (int i = 0; i < possibleBiomes.Length; i++)
 		{
@@ -401,7 +429,9 @@ class WorldGenOverhaulGenerator : IWorldGenerator
 				return possibleBiomes[i].biome;
 			}
 		}
-		return possibleBiomes[0].biome;
+		if (possibleBiomes.Length > 0)
+			return possibleBiomes[0].biome;
+		return BiomeManager.Current.Biomes[0];
 	}
 
 	public static T[] AddToArray<T>(T[] array, T item)

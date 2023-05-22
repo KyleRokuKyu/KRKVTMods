@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5JsZ01B5UfH7mG4YCBqAMc0BQ1R9z2EMhCsbTN5kGVIWWvVGBAlRys5YsopMsFD/0x4k3amRN41GnbGjqCmpww==",
+  "dgSpecHash": "1xtKmuJzBbb4aDQ1+9JG0Zf3wHw0QTnf35o46DIRDIdTKZgs03z4qp12p1YXkl/hNO+o62UZClB2opSUr5pNHA==",
   "success": true,
   "projectFilePath": "S:\\Steam\\steamapps\\common\\VoxelTycoon\\Modding Stuffs\\KRKVTModsRepo\\Biomeizer\\Biomeizer\\Biomeizer.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\rage9\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\rage9\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

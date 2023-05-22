@@ -1,10 +1,6 @@
 ﻿using UnityEngine;
 using VoxelTycoon;
 using VoxelTycoon.Modding;
-using System.IO;
-using System.Reflection;
-using System.Collections.Generic;
-using System;
 
 /// <summary>
 /// Class which saves and loads settings to and from PlayerPrefs for SettingsMods

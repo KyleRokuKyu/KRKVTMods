@@ -1,6 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using UnityEngine;
 using VoxelTycoon;
+using VoxelTycoon.AssetLoading;
+using VoxelTycoon.AssetManagement;
 using VoxelTycoon.Game.UI;
 using VoxelTycoon.Modding;
 
@@ -61,6 +66,21 @@ public class WorldGenOverhaulSettings : SettingsMod
 		settingsControl.AddToggle("Bigger Elevation Changes", "Whether or not this world uses the larger elevation changes. (Warning, this means more terraforming is required)",
 									() => SettingsModHelper.GetSetting<bool, WorldGenOverhaulSettings>(BiggerElevationChanges, true),
 									value => SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(BiggerElevationChanges, value, worldSettings));
+
+		List<string> biomes = new List<string>();
+		foreach (Pack p in LazyManager<PackManager>.Current.GetPacks())
+		{
+			foreach (string f in Directory.GetFiles(p.Directory.FullName, "*.biome", SearchOption.AllDirectories))
+			{
+				if (!biomes.Contains(Path.GetFileName(f).Split(".biome")[0]))
+				{
+					string s = Path.GetFileName(f).Split(".biome")[0];
+					settingsControl.AddToggle(s, "If 'on', this Biome is enabled",
+											() => SettingsModHelper.GetSetting<bool, WorldGenOverhaulSettings>(s, true),
+											value => SettingsModHelper.SetSetting<bool, WorldGenOverhaulSettings>(s, value, worldSettings));
+				}
+			}
+		}
 	}
 
 	public static GenerationMethods StringToTempGen(string value)
