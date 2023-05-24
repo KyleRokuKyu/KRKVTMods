@@ -1,0 +1,11 @@
+{
+  "Description": "Only spawns a single city.  No other cities will spawn.  Your city will expand and you will have to travel further and further for higher tier resources.",
+  "Hidden": false,
+  "Tags": [
+    "Gameplay",
+    "Utils",
+    "Visuals",
+    "Other"
+  ],
+  "Title": "Single City"
+}
