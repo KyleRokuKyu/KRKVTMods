@@ -1,0 +1,10 @@
+{
+  "Dependencies": null,
+  "Description": "A quick addition that allows patch files to have research dependancies before applying.  Use the extension .rpatch instead of .patch to enable the functionality.",
+  "Hidden": false,
+  "Tags": [
+    "Utils",
+    "Other"
+  ],
+  "Title": "Research Based Patches"
+}
